@@ -1,0 +1,42 @@
+<template>
+    <div>
+        <h2>Headline</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Data</th>
+                <th>Data</th>
+                <th>Data</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+            </tr>
+            <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+            </tr>
+            <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+            </tr>
+            <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+            </tr>
+            <tr>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</template>

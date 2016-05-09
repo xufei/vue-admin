@@ -1,0 +1,219 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url("http://weloveiconfonts.com/api/?family=fontawesome");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:before, :after {
+    display: block;
+    position: absolute;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    font: 15px/1 Lato, sans-serif;
+    color: #777;
+}
+
+a {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    width: 250px;
+    background: #3b4854;
+}
+
+nav header {
+    position: relative;
+    height: 80px;
+    padding: 20px 0 0 15px;
+    font-size: 16px;
+    color: #fff;
+    border-bottom: 1px solid #465563;
+    background: #303b45;
+}
+
+nav header span {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin: 0 10px 0 0;
+    vertical-align: middle;
+    border: 1px solid #fff;
+}
+
+nav header span:before {
+    content: '\f007';
+    font: normal 20px FontAwesome;
+    top: 7px;
+    left: 9px;
+}
+
+nav header a:before {
+    content: '\f08b';
+    font: normal 20px FontAwesome;
+    top: 28px;
+    right: 15px;
+}
+
+nav ul span {
+    display: block;
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    border-bottom: 1px solid #465563;
+}
+
+nav ul a {
+    position: relative;
+    display: block;
+    padding: 15px 15px 17px 50px;
+    color: #fff;
+    border-bottom: 1px solid #465563;
+}
+
+nav ul a:hover,
+nav ul a.active {
+    background: #465563;
+}
+
+nav ul a:before {
+    font: normal 20px FontAwesome;
+    top: 14px;
+    left: 16px;
+}
+
+nav ul li:nth-child(2) a:before {
+    content: '\f00a';
+}
+
+nav ul li:nth-child(3) a:before {
+    content: '\f012';
+}
+
+nav ul li:nth-child(4) a:before {
+    content: '\f018';
+}
+
+nav ul li:nth-child(5) a:before {
+    content: '\f024';
+}
+
+nav ul li:nth-child(6) a:before {
+    content: '\f0c3';
+}
+
+nav ul li:nth-child(7) a:before {
+    content: '\f09b';
+}
+
+nav ul li:nth-child(8) a:before {
+    content: '\f0fa';
+}
+
+nav ul li:nth-child(10) a:before {
+    content: '\f002';
+}
+
+nav ul li:nth-child(11) a:before {
+    content: '\f085';
+}
+
+nav ul li:nth-child(12) a:before {
+    content: '\f08b';
+}
+
+main {
+    flex: 1;
+    padding: 25px;
+    background: #f5f5f5;
+}
+
+main h1 {
+    height: 80px;
+    margin: -25px -25px 25px -25px;
+    padding: 0 25px;
+    line-height: 76px;
+    font-size: 28px;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 1px solid #fff;
+    background: #fafafa;
+}
+
+.flex-grid {
+    display: flex;
+}
+
+.flex-grid > div {
+    flex: 1;
+    margin: 0 20px 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.flex-grid > div:last-child {
+    margin-right: 0;
+}
+
+.flex-grid h2 {
+    margin: -15px -15px 15px -15px;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ddd;
+    background: #fafafa;
+}
+
+.flex-grid li {
+    position: relative;
+    margin: 0 0 10px;
+    padding: 0 0 0 25px;
+}
+
+.flex-grid li:before {
+    content: '\f00c';
+    font: normal 16px FontAwesome;
+    top: 0;
+    left: 0;
+    color: #5b5;
+}
+
+.flex-grid table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.flex-grid table tr:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+.flex-grid table tr:nth-child(even) {
+    background: #fff;
+}
+
+.flex-grid table th {
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+}
+
+.flex-grid table td {
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+}
