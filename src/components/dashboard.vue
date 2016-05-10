@@ -28,6 +28,8 @@
 import ListPanel from './listpanel'
 import GridPanel from './gridpanel'
 
+import HintService from '../services/hint-service'
+
 export default {
   data () {
     return {
@@ -43,6 +45,8 @@ export default {
     GridPanel
   }
 }
+
+HintService.hint('Hello', 'World')
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
