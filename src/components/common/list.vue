@@ -1,12 +1,18 @@
 <template>
   <ul>
-    <li>no position: absolute</li>
-    <li>no float</li>
-    <li>no clearfix</li>
-    <li>no faux columns</li>
-    <li>no javascript</li>
+    <li v-for="item in data">
+      {{item}}
+    </li>
   </ul>
 </template>
+
+<script>
+export default {
+  props: {
+    data: Array
+  }
+}
+</script>
 
 <style scoped>
 li {
