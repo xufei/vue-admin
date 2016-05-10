@@ -1,28 +1,32 @@
 <template>
-<main>
-
+  <main>
     <h1>Flexbox Admin Template</h1>
 
     <div class="flex-grid">
-        <panel></panel>
-        <panel></panel>
-        <panel></panel>
+      <list-panel></list-panel>
+      <list-panel></list-panel>
+      <list-panel></list-panel>
     </div>
 
     <div class="flex-grid">
-        <panel></panel>
-        <panel></panel>
+      <list-panel></list-panel>
+      <list-panel></list-panel>
     </div>
 
     <div class="flex-grid">
-      <datagrid></datagrid>
+      <grid-panel></grid-panel>
     </div>
-</main>
+
+    <div class="flex-grid">
+      <grid-panel></grid-panel>
+      <list-panel></list-panel>
+    </div>
+  </main>
 </template>
 
 <script>
-import Panel from './panel'
-import Datagrid from './datagrid'
+import ListPanel from './listpanel'
+import GridPanel from './gridpanel'
 
 export default {
   data () {
@@ -35,8 +39,8 @@ export default {
     }
   },
   components: {
-    Panel,
-    Datagrid
+    ListPanel,
+    GridPanel
   }
 }
 </script>
