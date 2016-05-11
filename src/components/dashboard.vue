@@ -3,12 +3,12 @@
     <h1>Flexbox Admin Template</h1>
 
     <div class="flex-grid">
-      <list-panel></list-panel>
-      <list-panel></list-panel>
+      <calendar></calendar>
       <list-panel></list-panel>
     </div>
 
     <div class="flex-grid">
+      <list-panel></list-panel>
       <list-panel></list-panel>
       <list-panel></list-panel>
     </div>
@@ -27,6 +27,7 @@
 <script>
 import ListPanel from './listpanel'
 import GridPanel from './gridpanel'
+import Calendar from './common/calendar'
 
 import HintService from '../services/hint-service'
 
@@ -42,7 +43,8 @@ export default {
   },
   components: {
     ListPanel,
-    GridPanel
+    GridPanel,
+    Calendar
   }
 }
 

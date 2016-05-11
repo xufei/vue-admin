@@ -67,6 +67,10 @@ table tr:nth-child(even) {
   background: #fff;
 }
 
+table tr:hover {
+  background: #c0c0c0;
+}
+
 table th {
   padding: 10px;
   font-size: 12px;
