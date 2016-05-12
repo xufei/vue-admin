@@ -1,5 +1,7 @@
 <template>
-  <hint v-for="hint in hints" :title="hint.title" :content="hint.content"></hint>
+  <div>
+    <hint v-for="hint in hints" :title="hint.title" :content="hint.content"></hint>
+  </div>
 </template>
 
 <script>
@@ -18,5 +20,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+div {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  display: block;
+}
 </style>

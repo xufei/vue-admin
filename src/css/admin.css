@@ -178,3 +178,8 @@ main h1 {
     border-bottom: 1px solid #ddd;
     background: #fafafa;
 }
+
+#app {
+    display: flex;
+    flex: 1;
+}

@@ -67,7 +67,7 @@ table tr:nth-child(even) {
   background: #fff;
 }
 
-table tr:hover {
+table tbody tr:hover {
   background: #c0c0c0;
 }
 
