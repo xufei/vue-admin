@@ -27,9 +27,9 @@
 <script>
 import ListPanel from './listpanel'
 import GridPanel from './gridpanel'
-import Calendar from './common/calendar'
+import Calendar from '../../components/common/calendar'
 
-import HintService from '../services/hint-service'
+import HintService from '../../services/hint-service'
 
 export default {
   data () {

@@ -10,7 +10,7 @@
     <ul>
         <li><span>Navigation</span></li>
         <li><a class="active">Dashboard</a></li>
-        <li><a>Statistics</a></li>
+        <li><a href="#employee-list">Statistics</a></li>
         <li><a>Roadmap</a></li>
         <li><a>Milestones</a></li>
         <li><a>Tickets</a></li>

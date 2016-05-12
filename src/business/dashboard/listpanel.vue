@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import List from './common/list'
+import List from '../../components/common/list'
 
 export default {
   data () {

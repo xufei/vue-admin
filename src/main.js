@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import App from './app'
-import Dashboard from './components/dashboard'
 import Router from 'vue-router'
 import VueResource from 'vue-resource'
 import './css/admin.css'
+
+import Dashboard from './business/dashboard/dashboard'
+import EmployeeList from './business/employee/employee-list'
 
 Vue.use(VueResource)
 Vue.use(Router)
@@ -16,6 +18,9 @@ router.map({
   },
   '/dashboard': {
     component: Dashboard
+  },
+  '/employee-list': {
+    component: EmployeeList
   }
 })
 
