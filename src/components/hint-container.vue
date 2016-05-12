@@ -1,5 +1,5 @@
 <template>
-  <hint v:for="hint in hints" :title="hint.title" :content="hint.content"></hint>
+  <hint v-for="hint in hints" :title="hint.title" :content="hint.content"></hint>
 </template>
 
 <script>

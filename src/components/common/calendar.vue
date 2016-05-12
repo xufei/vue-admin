@@ -8,7 +8,7 @@
         </div>
         <div class="year">{{calendar.year}}</div>
     </header>
-        
+
     <div class="date-view" v-if="viewMode==0">
         <div class="calendar-row calendar-header">
             <div class="prev" @click="calendar.previousYear()">
@@ -39,7 +39,7 @@
                  :class="{'disabled':!dateInRange(day), 'active':isToday(day)}">
                 <a href="javascript:void(0)" v-if="day"
                  @click="selectDate(day)">{{day}}</a>
-                <span ng-if="!day"></span>
+                <span v-if="!day"></span>
             </div>
         </div>
     </div>

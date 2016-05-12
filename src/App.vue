@@ -1,7 +1,9 @@
 <template>
-  <side-nav></side-nav>
-  <router-view></router-view>
-  <hint-container></hint-container>
+  <div>
+    <side-nav></side-nav>
+    <router-view></router-view>
+    <hint-container></hint-container>
+  </div>
 </template>
 
 <script>
