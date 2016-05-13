@@ -7,13 +7,14 @@
       <button>Edit</button>
       <button>Delete</button>
     </div>
-    
+
     <data-table :columns="gridColumns" :data="gridData"></data-table>
   </main>
 </template>
 
 <script>
 import DataTable from '../../components/common/datatable'
+import EmployeeService from '../../services/business/employee-service'
 
 export default {
   data () {
@@ -29,6 +30,9 @@ export default {
   },
   components: {
     DataTable
+  },
+  ready () {
+    EmployeeService.getEmployeeList()
   }
 }
 </script>
