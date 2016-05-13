@@ -1,14 +1,16 @@
 import Vue from 'vue'
 import HttpService from '../http-service'
 
-const resource = Vue.resource('employee{/id}')
-
 class EmployeeList extends HttpService {
+  constructor () {
+    super()
+    this.resource = Vue.resource('employee{/id}')
+  }
   getEmployeeList () {
 
   }
   getEmployee (id) {
-    return resource.get({id})
+    return this.resource.get({id})
   }
 }
 
