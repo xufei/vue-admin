@@ -4,7 +4,9 @@ import Router from 'vue-router'
 import './css/admin.css'
 
 import Dashboard from './business/dashboard/dashboard'
+import Employee from './business/employee/employee'
 import EmployeeList from './business/employee/employee-list'
+import EmployeeDetail from './business/employee/employee-detail'
 
 Vue.use(Router)
 
@@ -17,8 +19,16 @@ router.map({
   '/dashboard': {
     component: Dashboard
   },
-  '/employee-list': {
-    component: EmployeeList
+  '/employee': {
+    component: Employee,
+    subRoutes: {
+      '/': {
+        component: EmployeeList
+      },
+      '/detail': {
+        component: EmployeeDetail
+      }
+    }
   }
 })
 

@@ -8,20 +8,34 @@
 
     <ul>
         <li><span>Navigation</span></li>
-        <li><a class="active" v-link="'dashboard'">Dashboard</a></li>
-        <li><a v-link="'employee-list'">Statistics</a></li>
-        <li><a>Roadmap</a></li>
-        <li><a>Milestones</a></li>
-        <li><a>Tickets</a></li>
-        <li><a>GitHub</a></li>
-        <li><a>FAQ</a></li>
-        <li><span>Other</span></li>
-        <li><a>Search</a></li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
-    </ul>]
+        <li v-for="menu in menus" :class="{'active': menu==activeMenu}">
+            <a v-link="menu.state">{{menu.name}}</a>
+        </li>
+    </ul>
 </nav>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      menus: [
+        {name: 'Dashboard', state: 'dashboard'},
+        {name: 'Employees', state: 'employee'},
+        {name: 'Roadmap', state: 'dashboard'},
+        {name: 'Milestones', state: 'dashboard'},
+        {name: 'Tickets', state: 'dashboard'},
+        {name: 'GitHub', state: 'dashboard'},
+        {name: 'FAQ', state: 'dashboard'}
+      ],
+      activeMenu: null
+    }
+  },
+  ready () {
+    this.activeMenu = this.menus[0]
+  }
+}
+</script>
 
 <style>
 nav {

@@ -3,13 +3,13 @@ import VueResource from 'vue-resource'
 
 Vue.use(VueResource)
 
-Vue.http.options.root = '/root'
+Vue.http.options.root = ''
 Vue.http.headers.common['Authorization'] = 'Basic YXBpOnBhc3N3b3Jk'
 
 export default class HttpService {
-  load () {
+  get (url, param) {
     // GET request
-    Vue.http.get('http://www.baidu.com').then(response => {
+    return Vue.http.get(url, param).then(response => {
       // get status
       response.status
       // get all headers

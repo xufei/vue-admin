@@ -48,7 +48,7 @@ export default {
   }
 }
 
-setInterval(() => HintService.hint('Hello', 'World'), 10000)
+setTimeout(() => HintService.hint('Hello', 'World'), 60000)
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
