@@ -20,12 +20,15 @@ router.map({
     component: Dashboard
   },
   '/employee': {
+    name: 'employee',
     component: Employee,
     subRoutes: {
       '/': {
+        name: 'employee-list',
         component: EmployeeList
       },
-      '/detail': {
+      '/detail/:id': {
+        name: 'employee-detail',
         component: EmployeeDetail
       }
     }
@@ -37,7 +40,7 @@ router.beforeEach(function () {
 })
 
 router.afterEach(function (transition) {
-  console.log(transition)
+  console.log(transition.to)
 })
 
 router.alias({
