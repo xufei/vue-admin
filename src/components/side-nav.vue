@@ -8,14 +8,16 @@
 
     <ul>
         <li><span>Navigation</span></li>
-        <li v-for="menu in menus" :class="{'active': menu==activeMenu}">
-            <a v-link="menu.state">{{menu.name}}</a>
+        <li v-for="menu in menus" @click="switchMenu(menu)">
+            <a :class="{'active': menu==activeMenu}" v-link="menu.state">{{menu.name}}</a>
         </li>
     </ul>
 </nav>
 </template>
 
 <script>
+import DashboardIcon from './icons/dashboard'
+
 export default {
   data () {
     return {
@@ -29,6 +31,14 @@ export default {
         {name: 'FAQ', state: 'dashboard'}
       ],
       activeMenu: null
+    }
+  },
+  components: {
+    DashboardIcon
+  },
+  methods: {
+    switchMenu (menu) {
+      this.activeMenu = menu
     }
   },
   ready () {
@@ -95,52 +105,13 @@ nav ul a {
 
 nav ul a:hover,
 nav ul a.active {
-    background: #465563;
+    background: #576674;
 }
+
 
 nav ul a:before {
-    font: normal 20px FontAwesome;
-    top: 14px;
-    left: 16px;
-}
-
-nav ul li:nth-child(2) a:before {
-    content: '\f00a';
-}
-
-nav ul li:nth-child(3) a:before {
-    content: '\f012';
-}
-
-nav ul li:nth-child(4) a:before {
-    content: '\f018';
-}
-
-nav ul li:nth-child(5) a:before {
-    content: '\f024';
-}
-
-nav ul li:nth-child(6) a:before {
-    content: '\f0c3';
-}
-
-nav ul li:nth-child(7) a:before {
-    content: '\f09b';
-}
-
-nav ul li:nth-child(8) a:before {
-    content: '\f0fa';
-}
-
-nav ul li:nth-child(10) a:before {
-    content: '\f002';
-}
-
-nav ul li:nth-child(11) a:before {
-    content: '\f085';
-}
-
-nav ul li:nth-child(12) a:before {
     content: '\f08b';
+    font: normal 16px FontAwesome;
+    left: 20px;
 }
 </style>

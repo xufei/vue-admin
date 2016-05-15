@@ -36,6 +36,10 @@ router.beforeEach(function () {
   window.scrollTo(0, 0)
 })
 
+router.afterEach(function (transition) {
+  console.log(transition)
+})
+
 router.alias({
   '/': '/login'
 })
