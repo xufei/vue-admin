@@ -4,7 +4,7 @@
     <li>{{employee.gender}}</li>
     <li>{{employee.age}}</li>
   </ul>
-</tempate>
+</template>
 
 <script>
 export default {
