@@ -1,5 +1,5 @@
 <template>
-  <div class="fade in">
+  <div transition="fade">
     <h2>{{title}}</h2>
     <p>{{content}}</p>
   </div>
@@ -25,13 +25,13 @@ div {
   box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 }
 
-div.fade {
-    opacity: 0;
+div.fade-transition {
+    opacity: 1;
     transition: opacity 0.5s linear;
 }
 
-div.fade.in {
-    opacity: 1;
+div.fade-enter, div.fade-leave {
+    opacity: 0;
 }
 
 h2 {

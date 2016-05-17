@@ -42,7 +42,7 @@ export default {
     Calendar
   },
   ready () {
-    setTimeout(() => HintService.hint('Hello', 'World'), 60000)
+    setTimeout(() => HintService.hint('Hello', 'World'), 6000)
   }
 }
 
