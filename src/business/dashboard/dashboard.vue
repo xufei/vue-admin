@@ -43,6 +43,10 @@ export default {
   },
   ready () {
     setTimeout(() => HintService.hint('Hello', 'World'), 6000)
+    setTimeout(() => HintService.hint('Hello', 'World2'), 6500)
+    setTimeout(() => HintService.hint('Hello', 'World3'), 7000)
+    setTimeout(() => HintService.hint('Hello', 'World4'), 7500)
+    setTimeout(() => HintService.hint('Hello', 'World5'), 8000)
   }
 }
 
