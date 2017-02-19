@@ -41,7 +41,7 @@ export default {
     GridPanel,
     Calendar
   },
-  ready () {
+  created () {
     setTimeout(() => HintService.hint('Hello', 'World'), 6000)
     setTimeout(() => HintService.hint('Hello', 'World2'), 6500)
     setTimeout(() => HintService.hint('Hello', 'World3'), 7000)

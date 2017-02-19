@@ -20,7 +20,7 @@
       <tbody>
         <tr v-for="employee in employees">
           <td>
-            <a v-link="{name:'employee-detail', params:employee}">{{employee.name}}</a>
+            <router-link :to="{name:'EmployeeDetail', params:employee}" >{{employee.name}}</router-link>
           </td>
           <td>{{employee.gender}}</td>
           <td>{{employee.age}}</td>
@@ -43,7 +43,7 @@ export default {
   components: {
     DataTable
   },
-  ready () {
+  created () {
     EmployeeService.getEmployeeList().then(result => {
       this.employees = result
     })

@@ -1,17 +1,17 @@
 <template>
 <nav>
-    <header>
-        <span></span>
-        Xu Fei
-        <a></a>
-    </header>
+  <header>
+    <i></i>
+    <span>Xu Fei<span>
+    <a></a>
+  </header>
 
-    <ul>
-        <li><span>Navigation</span></li>
-        <li v-for="menu in menus" @click="switchMenu(menu)">
-            <a :class="{'active': menu==activeMenu}" v-link="menu.state">{{menu.name}}</a>
-        </li>
-    </ul>
+  <ul>
+    <li><span>Navigation</span></li>
+    <li v-for="menu in menus" @click="switchMenu(menu)">
+      <router-link :to="menu.state" >{{menu.name}}</router-link>
+    </li>
+  </ul>
 </nav>
 </template>
 
@@ -63,7 +63,7 @@ nav header {
     background: #303b45;
 }
 
-nav header span {
+nav header i {
     position: relative;
     display: inline-block;
     width: 36px;
@@ -73,14 +73,14 @@ nav header span {
     border: 1px solid #fff;
 }
 
-nav header span:before {
+nav header i:before {
     content: '\f007';
     font: normal 20px FontAwesome;
     top: 7px;
     left: 9px;
 }
 
-nav header a:before {
+nav header i:before {
     content: '\f08b';
     font: normal 20px FontAwesome;
     top: 28px;

@@ -1,50 +1,15 @@
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './app'
-import Router from 'vue-router'
+import App from './App'
+import router from './router'
+
 import './css/admin.css'
 
-import Dashboard from './business/dashboard/dashboard'
-import Employee from './business/employee/employee'
-import EmployeeList from './business/employee/employee-list'
-import EmployeeDetail from './business/employee/employee-detail'
-
-Vue.use(Router)
-
-var router = new Router()
-
-router.map({
-  '/login': {
-    component: Dashboard
-  },
-  '/dashboard': {
-    component: Dashboard
-  },
-  '/employee': {
-    name: 'employee',
-    component: Employee,
-    subRoutes: {
-      '/': {
-        name: 'employee-list',
-        component: EmployeeList
-      },
-      '/detail/:id': {
-        name: 'employee-detail',
-        component: EmployeeDetail
-      }
-    }
-  }
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  template: '<App/>',
+  components: { App }
 })
-
-router.beforeEach(function () {
-  window.scrollTo(0, 0)
-})
-
-router.afterEach(function (transition) {
-  console.log(transition.to)
-})
-
-router.alias({
-  '/': '/login'
-})
-
-router.start(App, '#app')
