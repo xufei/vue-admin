@@ -31,8 +31,6 @@ import Calendar from '../../components/common/calendar'
 import MessageList from '../../components/message/message-list'
 import MoneyPanel from './money-panel'
 
-import HintService from '../../services/hint-service'
-
 export default {
   data () {
     return {
@@ -44,15 +42,6 @@ export default {
     Calendar,
     MessageList,
     MoneyPanel
-  },
-  created () {
-    /*
-    setTimeout(() => HintService.hint('Hello', 'World'), 6000)
-    setTimeout(() => HintService.hint('Hello', 'World2'), 6500)
-    setTimeout(() => HintService.hint('Hello', 'World3'), 7000)
-    setTimeout(() => HintService.hint('Hello', 'World4'), 7500)
-    setTimeout(() => HintService.hint('Hello', 'World5'), 8000)
-    */
   }
 }
 

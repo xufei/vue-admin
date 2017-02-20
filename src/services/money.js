@@ -3,6 +3,7 @@ import { Subject } from 'rxjs/Subject'
 import 'rxjs/add/operator/scan'
 import 'rxjs/add/observable/interval'
 import 'rxjs/add/operator/mapTo'
+import 'rxjs/add/operator/startWith'
 import 'rxjs/add/operator/merge'
 import 'rxjs/add/observable/combineLatest'
 import 'rxjs/add/operator/distinct'
@@ -10,7 +11,7 @@ import 'rxjs/add/observable/merge'
 
 // 挣钱是为了买房，买房是为了赚钱
 const house$ = new Subject()
-const houseCount$ = house$.scan((acc, num) => acc + num, 0)
+const houseCount$ = house$.startWith(0).scan((acc, num) => acc + num, 0)
 
 // 工资始终不涨
 const salary$ = Observable.interval(100).mapTo(2)
@@ -19,6 +20,7 @@ const rent$ = Observable
   .combineLatest(Observable.interval(3000), houseCount$)
   .distinct(arr => arr[0])
   .map(arr => arr[1] * 5)
+  .startWith(0)
 
 // 一买了房，就没现金了……
 const cash$ = Observable.merge(salary$, rent$)
