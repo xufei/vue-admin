@@ -4,7 +4,7 @@ const list = [
   { id: '003', name: 'Sun Wukong', gender: 1, age: 534 }
 ]
 
-class EmployeeList {
+class EmployeeService {
   getEmployeeList () {
     return Promise.resolve(list)
   }
@@ -13,4 +13,4 @@ class EmployeeList {
   }
 }
 
-export default new EmployeeList()
+export default new EmployeeService()

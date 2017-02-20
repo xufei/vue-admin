@@ -32,7 +32,7 @@
 
 <script>
 import DataTable from '../../components/common/datatable'
-import EmployeeService from '../../services/business/employee-service'
+import EmployeeService from '../../services/employee'
 
 export default {
   data () {

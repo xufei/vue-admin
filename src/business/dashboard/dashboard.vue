@@ -1,16 +1,16 @@
 <template>
   <main>
-    <h1>Flexbox Admin Template</h1>
+    <h1>Vue Admin Portal</h1>
 
     <div class="flex-grid">
-      <calendar></calendar>
-      <list-panel></list-panel>
+      <message-list></message-list>
+      <money-panel></money-panel>
     </div>
 
     <div class="flex-grid">
       <list-panel></list-panel>
       <list-panel></list-panel>
-      <list-panel></list-panel>
+      <calendar></calendar>
     </div>
 
     <div class="flex-grid">
@@ -28,6 +28,8 @@
 import ListPanel from './listpanel'
 import GridPanel from './gridpanel'
 import Calendar from '../../components/common/calendar'
+import MessageList from '../../components/message/message-list'
+import MoneyPanel from './money-panel'
 
 import HintService from '../../services/hint-service'
 
@@ -39,14 +41,18 @@ export default {
   components: {
     ListPanel,
     GridPanel,
-    Calendar
+    Calendar,
+    MessageList,
+    MoneyPanel
   },
   created () {
+    /*
     setTimeout(() => HintService.hint('Hello', 'World'), 6000)
     setTimeout(() => HintService.hint('Hello', 'World2'), 6500)
     setTimeout(() => HintService.hint('Hello', 'World3'), 7000)
     setTimeout(() => HintService.hint('Hello', 'World4'), 7500)
     setTimeout(() => HintService.hint('Hello', 'World5'), 8000)
+    */
   }
 }
 
