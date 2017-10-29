@@ -9,4 +9,4 @@ const getTimer = interval => {
   return timerMap[interval]
 }
 
-export const getTimer
+export default getTimer

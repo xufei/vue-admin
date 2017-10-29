@@ -1,6 +1,6 @@
 <template>
   <div>
-    <hint v-for="hint in hints" :title="hint.title" :content="hint.content"></hint>
+    <hint v-for="(hint, i) in hints" :key="i" :title="hint.title" :content="hint.content"></hint>
   </div>
 </template>
 

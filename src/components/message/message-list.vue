@@ -1,6 +1,7 @@
 <template>
   <div>
-    <message v-for="message in messages"
+    <message v-for="(message, i) in messages"
+      :key="i"
       :title="message.title"
       :content="message.content"
       :createAt="message.createAt">

@@ -2,7 +2,7 @@
 <nav>
   <header>
     <i></i>
-    <span>Xu Fei<span>
+    <span>Xu Fei</span>
     <a></a>
   </header>
 
